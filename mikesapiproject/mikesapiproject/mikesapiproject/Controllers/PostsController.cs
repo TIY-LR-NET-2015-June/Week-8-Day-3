@@ -9,17 +9,20 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using mikesapiproject.Models;
+using System.Web.Http.Cors;
 
 namespace mikesapiproject.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PostsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Posts
-        public IQueryable<Post> GetPosts()
+        public IHttpActionResult GetPosts()
+       
         {
-            return db.Posts;
+            return Json(db.Posts);
         }
 
         // GET: api/Posts/5
@@ -32,7 +35,7 @@ namespace mikesapiproject.Controllers
                 return NotFound();
             }
 
-            return Ok(post);
+            return Json(post);
         }
 
         // PUT: api/Posts/5
