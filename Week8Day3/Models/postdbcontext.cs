@@ -5,9 +5,9 @@ namespace Week8Day3.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class postdbcontext : DbContext
+    public partial class PostDbContext : DbContext
     {
-        public postdbcontext()
+        public PostDbContext()
             : base("name=postdbcontext")
         {
             

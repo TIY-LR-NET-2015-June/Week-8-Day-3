@@ -5,14 +5,14 @@ namespace Week8Day3.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Week8Day3.Models.postdbcontext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Week8Day3.Models.PostDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Week8Day3.Models.postdbcontext context)
+        protected override void Seed(Week8Day3.Models.PostDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -12,9 +12,9 @@ using Week8Day3.Models;
 
 namespace Week8Day3.Controllers
 {
-    public class postsController : ApiController
+    public class PostsController : ApiController
     {
-        private postdbcontext db = new postdbcontext();
+        private PostDbContext db = new PostDbContext();
 
         // GET: api/posts
         public IQueryable<post> GetPosts()
